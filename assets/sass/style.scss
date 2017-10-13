@@ -1,0 +1,387 @@
+/*!
+	Theme Name: Gina Marie
+	Author: Gina Ribniscky
+	Author URI: http://www.ginamarie.tech
+	Description: Space theme for Gina Marie's website.
+	Version: 1.1.0
+*/
+
+@import 'var';
+@import 'ui';
+
+/* ======================================================= GENERIC */
+body {
+	@include font-size(1.6);
+	font-family: $font-stack-content;
+
+	background-color: $color-bg;
+}
+
+section, article, footer {
+	padding: 60px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-stack-header;
+	font-weight: 800;
+	text-transform: uppercase;
+	color: $color-dark;
+
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+h1 {
+	@include font-size(5.0);
+}
+
+h2 {
+	@include font-size(4.0);
+}
+
+.text-light {
+	color: $color-light;
+}
+
+/* SM / XS */
+@media screen and (max-width: 992px) {
+	section, article, footer {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	h1 {
+		@include font-size(4.0);
+	}
+
+	.sm-text-center {
+		text-align: center;
+	}
+}
+
+/* ======================================================= NAVIGATION */
+nav {
+	padding: 30px;
+
+	img {
+		max-height: 50px;
+	}
+
+	.main-menu {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			display: inline-block;
+		}
+
+		a {
+			position: relative;
+			display: inline-block;
+
+			margin: 15px 10px;
+		}
+	}
+}
+
+/* SM / XS */
+@media screen and (max-width: 992px) {
+	nav .main-menu a {
+		margin: 5px;
+		margin-top: 10px;
+	}
+}
+
+/* XS */
+@media screen and (max-width: 768px) {
+	img {
+		max-width: 100%;
+	}
+}
+
+/* ======================================================= HOME PAGE HERO */
+#hero {
+	display: flex;
+	height: 90vh;
+
+	background-image: url('assets/img/banner.jpg');
+	background-position: center top;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+
+	.container {
+		margin: auto;
+
+		h1 {
+			margin: 0;
+			color: $color-light;
+		}
+
+		small {
+			font-size: 16px;
+			color: $color-bright;
+		}
+	}
+}
+
+/* SM / XS */
+@media screen and (max-width: 992px) {
+	#hero {
+		height: 800px;
+
+		.container h1 {
+			font-size: 40px;
+		}
+	}
+}
+
+/* ======================================================= HOME PAGE SECTIONS */
+#services {
+	img {
+		margin-top: 30px;
+		width: 50px;
+	}
+
+	h3 {
+		font-family: "Lato";
+		font-weight: 300;
+	}
+
+	button {
+		margin: 30px 0;
+	}
+}
+
+#about-me {
+	background-color: $color-mid;
+	color: $color-light;
+
+	h2 {
+		padding: 0;
+		margin: 0;
+	}
+
+	i {
+		color: $color-light;
+		margin: 10px;
+		margin-top: 20px;
+
+		&:hover {
+			color: $color-bright;
+			cursor: pointer;
+		}
+	}
+
+	p {
+		font-size: 16px;
+		margin-top: 15px;
+	}
+
+	#selfie {
+		width: 100%;
+		border-radius: 100%;
+	}
+
+}
+
+
+/* ======================================================= GENERIC */
+.blog-result {
+	position: relative;
+	clear: both;
+	width: 100%;
+
+	img {
+		width: 30%;
+		min-width: 200px;
+		float: left;
+		margin: 15px;
+		margin-right: 20px;
+	}
+
+	h4 {
+		margin: 0;
+		font-size: 30px;
+		padding-top: 30px;
+		padding-bottom: 10px;
+	}
+
+	small {
+		font-size: 20px;
+		font-style: italic;
+	}
+}
+
+.barrier {
+	clear: both;
+	padding-top: 30px;
+	text-align: center;
+
+	i {
+		color: $color-mid;
+		margin: 0px 15px;
+	}
+}
+
+
+/* ======================================================= GENERIC */
+#sidebar {
+	.social-btn {
+		margin: 15px 0px;
+	}
+
+	img {
+		margin-bottom: 30px;
+		border: 3px solid $color-mid;
+	}
+}
+
+ul.social-menu {
+	list-style: none;
+	padding: 0;
+
+	li {
+		display: inline-block;
+	}
+
+	.social-btn {
+		color: $color-mid-lt;
+
+		&:hover {
+			color: $color-mid;
+		}
+	}
+}
+
+.search-btn {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+
+	input {
+		width: 90%;
+		border: none;
+		padding: 5px;
+		margin-top: 30px;
+		background: none;
+		border-bottom: 1px solid #666666;
+	}
+
+	&:before {
+		font-family: "FontAwesome";
+		content: "\f002";
+	}
+}
+
+
+/* ======================================================= GENERIC */
+footer {
+	background-color: $color-dark;
+	color: $color-bright;
+
+	background-image: url('assets/img/footer.jpg');
+	background-position: center center;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+
+	border-top: 10px solid $color-dark;
+
+	h3 {
+		padding: 0;
+		margin: 0;
+		font-size: 40px;
+		color: $color-bright;
+	}
+
+	p {
+		margin: 15px;
+	}
+
+	.links {
+		padding-top: 30px;
+	}
+
+	#copyright {
+		color: $color-mid;
+	}
+}
+
+
+/* ======================================================= GENERIC */
+section.content-hero {
+	background-color: #CCCCCC;
+	background: url("assets/img/content_hero.jpg");
+	background-position: center center;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	padding-bottom: 350px;
+	z-index: -15;
+
+	h1 {
+		margin-top: 30px;
+		margin-bottom: 30px;
+		font-size: 60px;
+		color: $color-bright;
+	}
+
+	small {
+		color: $color-bright;
+		font-size: 20px;
+	}
+}
+
+.purple-bar, .yellow-bar {
+	left: 0;
+	content: " ";
+	width: 100%;
+	z-index: -10;
+}
+
+.purple-bar {
+	background-color: $color-mid;
+	height: 100px;
+}
+
+.yellow-bar {
+	background-color: $color-bright;
+	height: 75px;
+}
+
+article.content-body {
+	background-color: #ffffff;
+	border-bottom: none;
+	padding: 50px;
+	margin-top: -475px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* EXTRA SMALL */
+@media screen and (max-width: 768px) {
+	#about-me {
+		#selfie {
+			margin-top: 15px;
+			width: 50%;
+		}
+	}
+
+	#hero {
+		background-position: top right;
+	}
+
+	.blog-result {
+		h4 {
+			margin-top: 10px;
+		}
+	}
+}

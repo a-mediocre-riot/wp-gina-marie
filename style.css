@@ -1,0 +1,355 @@
+/*!
+	Theme Name: Gina Marie
+	Author: Gina Ribniscky
+	Author URI: http://www.ginamarie.tech
+	Description: Space theme for Gina Marie's website.
+	Version: 1.0.0
+*/
+@import url("https://fonts.googleapis.com/css?family=Lato|Dosis");
+@font-face {
+  font-family: 'Moon';
+  font-weight: bold;
+  src: url("assets/fonts/Moon_Bold.otf") format("opentype"); }
+@font-face {
+  font-family: 'Moon';
+  font-weight: normal;
+  src: url("assets/fonts/Moon_Light.otf") format("opentype"); }
+.gm-btn {
+  padding: 8px 15px;
+  margin-top: 15px;
+  background-color: #836887;
+  border: 1px solid #67526a;
+  border-radius: 2px;
+  font-family: "Lato";
+  font-size: 16px;
+  color: #FFFFFF; }
+  .gm-btn:hover {
+    color: #FFFFFF;
+    text-decoration: none !important;
+    background-color: #755d79;
+    border-color: #59475c; }
+  .gm-btn:active {
+    position: relative;
+    top: 1px; }
+  .gm-btn:visited {
+    color: #FFFFFF;
+    text-decoration: none; }
+
+.main-menu ul {
+  list-style: none;
+  margin-bottom: 0; }
+  .main-menu ul li {
+    display: inline-block; }
+
+.gm-link, .gm-link:hover,
+.main-menu a, .main-menu a:hover {
+  font-family: "Lato", helvetica;
+  color: #836887;
+  outline: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+.gm-link::before,
+.gm-link::after,
+.main-menu a::before,
+.main-menu a::after {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s; }
+
+.gm-link::before,
+.main-menu a::before {
+  margin-right: 10px;
+  content: '[';
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px); }
+
+.gm-link::after,
+.main-menu a::after {
+  margin-left: 10px;
+  content: ']';
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px); }
+
+.gm-link:hover::before,
+.gm-link:hover::after,
+.gm-link:focus::before,
+.gm-link:focus::after,
+.main-menu a:hover::before,
+.main-menu a:hover::after,
+.main-menu a:focus:before,
+.main-menu a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px); }
+
+/* ======================================================= GENERIC */
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-family: "Lato", helvetica;
+  background-color: #EEEDEB; }
+
+section, article, footer {
+  padding: 60px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Moon", "Dosis", "Helvetica Neue", helvetica;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #392F5A;
+  margin-top: 10px;
+  margin-bottom: 30px; }
+
+h1 {
+  font-size: 50px;
+  font-size: 5rem; }
+
+h2 {
+  font-size: 40px;
+  font-size: 4rem; }
+
+.text-light {
+  color: #EEEDEB; }
+
+/* SM / XS */
+@media screen and (max-width: 992px) {
+  section, article, footer {
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  h1 {
+    font-size: 40px;
+    font-size: 4rem; }
+
+  .sm-text-center {
+    text-align: center; } }
+/* ======================================================= NAVIGATION */
+nav {
+  padding: 30px; }
+  nav img {
+    max-height: 50px; }
+  nav .main-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    nav .main-menu li {
+      display: inline-block; }
+    nav .main-menu a {
+      position: relative;
+      display: inline-block;
+      margin: 15px 10px; }
+
+/* SM / XS */
+@media screen and (max-width: 992px) {
+  nav .main-menu a {
+    margin: 5px;
+    margin-top: 10px; } }
+/* XS */
+@media screen and (max-width: 768px) {
+  img {
+    max-width: 100%; } }
+/* ======================================================= HOME PAGE HERO */
+#hero {
+  display: flex;
+  height: 90vh;
+  background-image: url("assets/img/banner.jpg");
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  #hero .container {
+    margin: auto; }
+    #hero .container h1 {
+      margin: 0;
+      color: #EEEDEB; }
+    #hero .container small {
+      font-size: 16px;
+      color: #F4DAB6; }
+
+/* SM / XS */
+@media screen and (max-width: 992px) {
+  #hero {
+    height: 800px; }
+    #hero .container h1 {
+      font-size: 40px; } }
+/* ======================================================= HOME PAGE SECTIONS */
+#services img {
+  margin-top: 30px;
+  width: 50px; }
+#services h3 {
+  font-family: "Lato";
+  font-weight: 300; }
+#services button {
+  margin: 30px 0; }
+
+#about-me {
+  background-color: #836887;
+  color: #EEEDEB; }
+  #about-me h2 {
+    padding: 0;
+    margin: 0; }
+  #about-me i {
+    color: #EEEDEB;
+    margin: 10px;
+    margin-top: 20px; }
+    #about-me i:hover {
+      color: #F4DAB6;
+      cursor: pointer; }
+  #about-me p {
+    font-size: 16px;
+    margin-top: 15px; }
+  #about-me #selfie {
+    width: 100%;
+    border-radius: 100%; }
+
+/* ======================================================= GENERIC */
+.blog-result {
+  position: relative;
+  clear: both;
+  width: 100%; }
+  .blog-result img {
+    width: 30%;
+    min-width: 200px;
+    float: left;
+    margin: 15px;
+    margin-right: 20px; }
+  .blog-result h4 {
+    margin: 0;
+    font-size: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px; }
+  .blog-result small {
+    font-size: 20px;
+    font-style: italic; }
+
+.barrier {
+  clear: both;
+  padding-top: 30px;
+  text-align: center; }
+  .barrier i {
+    color: #836887;
+    margin: 0px 15px; }
+
+/* ======================================================= GENERIC */
+#sidebar .social-btn {
+  margin: 15px 0px; }
+#sidebar img {
+  margin-bottom: 30px;
+  border: 3px solid #836887; }
+
+ul.social-menu {
+  list-style: none;
+  padding: 0; }
+  ul.social-menu li {
+    display: inline-block; }
+  ul.social-menu .social-btn {
+    color: #C29EAC; }
+    ul.social-menu .social-btn:hover {
+      color: #836887; }
+
+.search-btn {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px; }
+  .search-btn input {
+    width: 90%;
+    border: none;
+    padding: 5px;
+    margin-top: 30px;
+    background: none;
+    border-bottom: 1px solid #666666; }
+  .search-btn:before {
+    font-family: "FontAwesome";
+    content: "\f002"; }
+
+/* ======================================================= GENERIC */
+footer {
+  background-color: #392F5A;
+  color: #F4DAB6;
+  background-image: url("assets/img/footer.jpg");
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-top: 10px solid #392F5A; }
+  footer h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+    color: #F4DAB6; }
+  footer p {
+    margin: 15px; }
+  footer .links {
+    padding-top: 30px; }
+  footer #copyright {
+    color: #836887; }
+
+/* ======================================================= GENERIC */
+section.content-hero {
+  background-color: #CCCCCC;
+  background: url("assets/img/content_hero.jpg");
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-bottom: 350px;
+  z-index: -15; }
+  section.content-hero h1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 60px;
+    color: #F4DAB6; }
+  section.content-hero small {
+    color: #F4DAB6;
+    font-size: 20px; }
+
+.purple-bar, .yellow-bar {
+  left: 0;
+  content: " ";
+  width: 100%;
+  z-index: -10; }
+
+.purple-bar {
+  background-color: #836887;
+  height: 100px; }
+
+.yellow-bar {
+  background-color: #F4DAB6;
+  height: 75px; }
+
+article.content-body {
+  background-color: #ffffff;
+  border-bottom: none;
+  padding: 50px;
+  margin-top: -475px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%; }
+
+/* --- MEDIA QUERIES --- */
+/* EXTRA SMALL */
+@media screen and (max-width: 768px) {
+  #about-me #selfie {
+    margin-top: 15px;
+    width: 50%; }
+
+  #hero {
+    background-position: top right; }
+
+  .blog-result h4 {
+    margin-top: 10px; } }
+
+/*# sourceMappingURL=style.css.map */

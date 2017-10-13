@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Dosis');
+
+@font-face {
+   font-family: 'Moon';
+   font-weight: bold;
+   src: url("assets/fonts/Moon_Bold.otf") format("opentype");
+}
+
+@font-face {
+   font-family: 'Moon';
+   font-weight: normal;
+   src: url("assets/fonts/Moon_Light.otf") format("opentype");
+}
+
+$color-light:  #EEEDEB;
+$color-bright: #F4DAB6;
+$color-mid-lt: #C29EAC;
+$color-mid:    #836887;
+$color-dark:   #392F5A;
+
+$color-bg: $color-light;
+
+// ====================================================================== FONTS
+$font-stack-header: "Moon", "Dosis", "Helvetica Neue", helvetica;
+$font-stack-content: "Lato", helvetica;
+
+// ====================================================================== MIXINS
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
